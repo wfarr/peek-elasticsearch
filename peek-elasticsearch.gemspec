@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "peek-elasticsearch"
-  spec.version       = "0.2.0"
+  spec.version       = "0.2.1"
   spec.authors       = ["Will Farrington"]
   spec.email         = ["wfarr@github.com"]
   spec.description   = %q{Take a peek into your Elasticsearch indices.}
