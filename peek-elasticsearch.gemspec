@@ -1,11 +1,8 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'peek-elasticsearch/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "peek-elasticsearch"
-  spec.version       = Peek::Elasticsearch::VERSION
+  spec.version       = "0.1.0"
   spec.authors       = ["Will Farrington"]
   spec.email         = ["wfarr@github.com"]
   spec.description   = %q{Take a peek into your Elasticsearch indices.}
