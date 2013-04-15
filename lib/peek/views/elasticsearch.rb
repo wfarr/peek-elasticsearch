@@ -39,17 +39,16 @@ module Peek
 
       def context
         {
-          :primaries => active_primary_shards,
-          :replicas  => active_replica_shards,
+          :index            => @index,
+          :primary          => active_primary_shards,
+          :replica          => active_replica_shards,
+          :inactive_primary => (number_of_shards - active_primary_shards),
+          :inactive_replica => (number_of_replicas - active_replica_shards),
         }
       end
 
       def results
-        {
-          :active    => active_shards,
-          :inactive  => (number_of_shards + number_of_replicas - active_shards),
-          :status    => status
-        }
+        { :status => status }
       end
 
       private
