@@ -29,8 +29,12 @@ module Peek
         index_health["active_shards"]
       end
 
-      def total_shards
+      def number_of_shards
         index_health["number_of_shards"]
+      end
+
+      def number_of_replicas
+        index_health["number_of_replicas"]
       end
 
       def context
@@ -43,7 +47,7 @@ module Peek
       def results
         {
           :active    => active_shards,
-          :inactive  => (total_shards - active_shards),
+          :inactive  => (number_of_shards + number_of_replicas - active_shards),
           :status    => status
         }
       end
