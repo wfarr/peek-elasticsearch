@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["wfarr@github.com"]
   spec.description   = %q{Take a peek into your Elasticsearch indices.}
   spec.summary       = %q{Take a peek into your Elasticsearch indices.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/wfarr/peek-elasticsearch"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
