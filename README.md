@@ -19,15 +19,5 @@ Or install it yourself as:
 ## Usage
 
 ``` ruby
-Peek.into Peek::Views::Elasticsearch
+Peek.into Peek::Views::Elasticsearch, :index => 'myapp-stuff'
 ```
-
-This by default will look for the existence of an index named
-`#{File.basename(Rails.root.to_s)}-#{Rails.env}` and report some basic stats.
-
-You can also specify a list of indices to peek at with:
-
-``` ruby
-Peek.into Peek::Views::Elasticsearch, :index => %w(myapp-stuff myapp-otherstuff)
-```
-
