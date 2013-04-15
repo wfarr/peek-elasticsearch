@@ -34,7 +34,7 @@ module Peek
       end
 
       def number_of_replicas
-        index_health["number_of_replicas"]
+        index_health["number_of_replicas"] * number_of_shards
       end
 
       def context
